@@ -1,0 +1,12 @@
+.draggable-list {
+  list-style-type: none;
+
+  & li {
+    min-width: 200px;
+    margin: 10px 0;
+    border: 1px solid black;
+    padding: 5px;
+    text-align: center;
+    cursor: pointer;
+  }
+}

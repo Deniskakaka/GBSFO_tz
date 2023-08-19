@@ -1,0 +1,21 @@
+.container_pagination {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  max-width: 600px;
+  background-color: aqua;
+  padding: 10px;
+  border-radius: 10px;
+
+  & li {
+    list-style-type: none;
+    cursor: pointer;
+  }
+}
+
+.active {
+  color: red;
+  font-weight: 900;
+  font-size: 22px;
+}
