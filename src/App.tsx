@@ -15,7 +15,7 @@ function App() {
 
   useEffect(() => {
     dispatch(actionFetchIcons() as any);
-  }, []);
+  }, [dispatch]);
 
   const renderContent = useMemo(() => {
     if (error) {
