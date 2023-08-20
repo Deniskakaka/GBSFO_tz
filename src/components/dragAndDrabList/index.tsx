@@ -2,6 +2,7 @@ import React from "react";
 import { Icon } from "../../type/types";
 import { useAppDispatch } from "../../redux/hooks";
 import { setCurrentIcon } from "../../redux/reducer";
+
 import "./dragAndDropList.scss";
 
 type Props = {

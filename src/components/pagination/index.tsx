@@ -1,10 +1,12 @@
 import { useEffect, useState } from "react";
 import ReactPaginate from "react-paginate";
 import { Icon } from "../../type/types";
+
 import { useAppDispatch } from "../../redux/hooks";
 import { setCurrentIcon } from "../../redux/reducer";
-import "./paginationStyle.scss";
 import { Button } from "../../ui/button";
+
+import "./paginationStyle.scss";
 
 type Props = {
   list: Icon[];

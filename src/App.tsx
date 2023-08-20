@@ -1,12 +1,14 @@
-import React, { useEffect, useMemo } from "react";
+import React, { useMemo } from "react";
 import { actionFetchIcons } from "./redux/actions";
 import { useAppDispatch, useAppSelector } from "./redux/hooks";
+
 import { Pagination } from "./components/pagination";
 import DraggableList from "./components/dragAndDrabList";
-import "./main.scss";
 import { Loader } from "./ui/loader";
 import { AnyAction } from "@reduxjs/toolkit";
 import { Button } from "./ui/button";
+
+import "./main.scss";
 
 function App() {
   const dispatch = useAppDispatch();
