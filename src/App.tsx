@@ -5,6 +5,8 @@ import { Pagination } from "./components/pagination";
 import DraggableList from "./components/dragAndDrabList";
 import "./main.scss";
 import { Loader } from "./ui/loader";
+import { AnyAction } from "@reduxjs/toolkit";
+import { Button } from "./ui/button";
 
 function App() {
   const dispatch = useAppDispatch();
@@ -13,9 +15,9 @@ function App() {
   const load = useAppSelector((state) => state.loader);
   const error = useAppSelector((state) => state.error);
 
-  useEffect(() => {
-    dispatch(actionFetchIcons() as any);
-  }, [dispatch]);
+  const FetchIcons = () => {
+    dispatch(actionFetchIcons() as unknown as AnyAction);
+  };
 
   const renderContent = useMemo(() => {
     if (error) {
@@ -34,7 +36,12 @@ function App() {
     }
   }, [currentList, error, list, load]);
 
-  return <div className="content">{renderContent}</div>;
+  return (
+    <div className="content">
+      {!list.length && <Button text="Load Icons" func={FetchIcons} />}
+      {renderContent}
+    </div>
+  );
 }
 
 export default App;
